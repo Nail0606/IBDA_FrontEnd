@@ -1,4 +1,5 @@
 package com.example.ibda_frontend
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +20,12 @@ class MainActivity : AppCompatActivity() {
             val popup = MyPopupFragment()
             popup.show(supportFragmentManager, "popup")
         }
+
+        val btnMoveToLogin = findViewById<Button>(R.id.btn_MoveLogin)
+        btnMoveToLogin.setOnClickListener {
+            val intent = Intent(this@MainActivity, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     class MyPopupFragment : DialogFragment() {
@@ -27,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View? {
-            return inflater.inflate(R.layout.popup_layout, container, false)
+            return inflater.inflate(R.layout.popup_layout_main, container, false)
         }
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
