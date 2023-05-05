@@ -26,6 +26,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, LoginActivity::class.java)
             startActivity(intent)
         }
+
+        val btnMoveToReCycle = findViewById<Button>(R.id.btn_MoveRecycle)
+        btnMoveToReCycle.setOnClickListener {
+            val intent = Intent(this@MainActivity, ReActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     class MyPopupFragment : DialogFragment() {
