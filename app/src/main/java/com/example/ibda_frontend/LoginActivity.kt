@@ -1,6 +1,7 @@
 package com.example.ibda_frontend
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -18,7 +19,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             //finish()
         }
-
         // 회원가입 버튼 클릭 시 회원가입 페이지로 이동
 //        val signUpButton = findViewById<Button>(R.id.btn_sign_up)
 //        signUpButton.setOnClickListener {
@@ -31,5 +31,6 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
     }
+
 }
 

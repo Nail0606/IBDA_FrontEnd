@@ -35,10 +35,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     class MyPopupFragment : DialogFragment() {
+
         override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
+
         ): View? {
             return inflater.inflate(R.layout.popup_layout_main, container, false)
         }
